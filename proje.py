@@ -16,7 +16,7 @@ tarih=time.strftime("%x").replace("/","_")
 
 
 
-access_token="sizin Dropbox access_tokeniniz" #****************************************************
+access_token="sizin Dropbox access_tokeniniz" #******************************************************
 
 
 
