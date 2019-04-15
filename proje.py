@@ -6,7 +6,7 @@ backsub = cv2.createBackgroundSubtractorMOG2()
 capture = cv2.VideoCapture("example_02.mp4")
 
 sayac=0
-cizgi=200
+cizgi_y=200
 yer_sayacı=0
 giren_insan_sayısı=0
 simdiki_veri = []
@@ -35,7 +35,7 @@ with open("veri/"+tarih+".txt","a") as dosya:
         if capture:
             sayi=1
             fgmask = backsub.apply(frame, None,0.018)
-            cv2.line(frame, (0, 200), (400, 200), (0, 255, 0), 2)
+            cv2.line(frame, (0, cizgi_y), (400, cizgi_y), (0, 255, 0), 2)
 
 
             _,contours,_ = cv2.findContours(fgmask.copy(), cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_NONE)
